@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076473CB2B9F1C610008F6A6 /* PaymentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076473CA2B9F1C610008F6A6 /* PaymentDetailView.swift */; };
+		076473CD2B9F1D3C0008F6A6 /* PaymentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076473CC2B9F1D3C0008F6A6 /* PaymentDetailViewModel.swift */; };
+		076473D02B9F240A0008F6A6 /* Preview+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076473CF2B9F240A0008F6A6 /* Preview+EXT.swift */; };
+		076473D22B9F2AA00008F6A6 /* Date+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076473D12B9F2AA00008F6A6 /* Date+EXT.swift */; };
 		07AAB5832B9C585700CBA087 /* PfinanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB5822B9C585700CBA087 /* PfinanceApp.swift */; };
 		07AAB5852B9C585700CBA087 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB5842B9C585700CBA087 /* ContentView.swift */; };
 		07AAB5872B9C585900CBA087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07AAB5862B9C585900CBA087 /* Assets.xcassets */; };
 		07AAB58A2B9C585900CBA087 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07AAB5892B9C585900CBA087 /* Preview Assets.xcassets */; };
+		07AAB5942B9C63EE00CBA087 /* PaymentActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB5932B9C63EE00CBA087 /* PaymentActivity.swift */; };
+		07AAB5972B9C67E200CBA087 /* Pfinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB5952B9C67E200CBA087 /* Pfinance.xcdatamodeld */; };
+		07AAB5992B9C691D00CBA087 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB5982B9C691D00CBA087 /* PersistenceController.swift */; };
+		07AAB59B2B9C9B5500CBA087 /* PaymentFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB59A2B9C9B5500CBA087 /* PaymentFormView.swift */; };
+		07AAB59D2B9CFA1F00CBA087 /* PaymentFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB59C2B9CFA1F00CBA087 /* PaymentFormViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		076473CA2B9F1C610008F6A6 /* PaymentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailView.swift; sourceTree = "<group>"; };
+		076473CC2B9F1D3C0008F6A6 /* PaymentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewModel.swift; sourceTree = "<group>"; };
+		076473CF2B9F240A0008F6A6 /* Preview+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview+EXT.swift"; sourceTree = "<group>"; };
+		076473D12B9F2AA00008F6A6 /* Date+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+EXT.swift"; sourceTree = "<group>"; };
 		07AAB57F2B9C585700CBA087 /* Pfinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pfinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07AAB5822B9C585700CBA087 /* PfinanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PfinanceApp.swift; sourceTree = "<group>"; };
 		07AAB5842B9C585700CBA087 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07AAB5862B9C585900CBA087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07AAB5892B9C585900CBA087 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07AAB5932B9C63EE00CBA087 /* PaymentActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentActivity.swift; sourceTree = "<group>"; };
+		07AAB5962B9C67E200CBA087 /* Pfinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pfinance.xcdatamodel; sourceTree = "<group>"; };
+		07AAB5982B9C691D00CBA087 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		07AAB59A2B9C9B5500CBA087 /* PaymentFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFormView.swift; sourceTree = "<group>"; };
+		07AAB59C2B9CFA1F00CBA087 /* PaymentFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		076473CE2B9F23E00008F6A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				076473CF2B9F240A0008F6A6 /* Preview+EXT.swift */,
+				076473D12B9F2AA00008F6A6 /* Date+EXT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		07AAB5762B9C585700CBA087 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +78,15 @@
 		07AAB5812B9C585700CBA087 /* Pfinance */ = {
 			isa = PBXGroup;
 			children = (
+				076473CE2B9F23E00008F6A6 /* Extensions */,
+				07AAB5922B9C634C00CBA087 /* Model */,
+				07AAB5912B9C634300CBA087 /* View */,
+				07AAB5902B9C633900CBA087 /* ViewModel */,
 				07AAB5822B9C585700CBA087 /* PfinanceApp.swift */,
 				07AAB5842B9C585700CBA087 /* ContentView.swift */,
 				07AAB5862B9C585900CBA087 /* Assets.xcassets */,
 				07AAB5882B9C585900CBA087 /* Preview Content */,
+				07AAB5952B9C67E200CBA087 /* Pfinance.xcdatamodeld */,
 			);
 			path = Pfinance;
 			sourceTree = "<group>";
@@ -65,6 +97,33 @@
 				07AAB5892B9C585900CBA087 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07AAB5902B9C633900CBA087 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				07AAB59C2B9CFA1F00CBA087 /* PaymentFormViewModel.swift */,
+				076473CC2B9F1D3C0008F6A6 /* PaymentDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		07AAB5912B9C634300CBA087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07AAB59A2B9C9B5500CBA087 /* PaymentFormView.swift */,
+				076473CA2B9F1C610008F6A6 /* PaymentDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07AAB5922B9C634C00CBA087 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07AAB5932B9C63EE00CBA087 /* PaymentActivity.swift */,
+				07AAB5982B9C691D00CBA087 /* PersistenceController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07AAB5942B9C63EE00CBA087 /* PaymentActivity.swift in Sources */,
+				07AAB59D2B9CFA1F00CBA087 /* PaymentFormViewModel.swift in Sources */,
+				07AAB5972B9C67E200CBA087 /* Pfinance.xcdatamodeld in Sources */,
 				07AAB5852B9C585700CBA087 /* ContentView.swift in Sources */,
+				07AAB59B2B9C9B5500CBA087 /* PaymentFormView.swift in Sources */,
 				07AAB5832B9C585700CBA087 /* PfinanceApp.swift in Sources */,
+				076473D02B9F240A0008F6A6 /* Preview+EXT.swift in Sources */,
+				076473CB2B9F1C610008F6A6 /* PaymentDetailView.swift in Sources */,
+				07AAB5992B9C691D00CBA087 /* PersistenceController.swift in Sources */,
+				076473CD2B9F1D3C0008F6A6 /* PaymentDetailViewModel.swift in Sources */,
+				076473D22B9F2AA00008F6A6 /* Date+EXT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +407,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		07AAB5952B9C67E200CBA087 /* Pfinance.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				07AAB5962B9C67E200CBA087 /* Pfinance.xcdatamodel */,
+			);
+			currentVersion = 07AAB5962B9C67E200CBA087 /* Pfinance.xcdatamodel */;
+			path = Pfinance.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 07AAB5772B9C585700CBA087 /* Project object */;
 }
