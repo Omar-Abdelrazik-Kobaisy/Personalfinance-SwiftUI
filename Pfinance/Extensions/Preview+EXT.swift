@@ -14,7 +14,7 @@ extension PreviewProvider {
         let testTrans = PaymentActivity(context: context)
         testTrans.paymentId = UUID()
         testTrans.name = "test Transaction"
-        testTrans.amount = 9999999999999
+        testTrans.amount = 9999
         testTrans.type = .income
         testTrans.date = .now
         testTrans.address = "8. el-Basra Street behind Cairo Mall"

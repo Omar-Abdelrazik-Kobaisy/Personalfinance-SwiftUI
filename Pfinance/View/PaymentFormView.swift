@@ -112,6 +112,8 @@ struct PaymentFormView: View {
                         print("faild to save to dashboard ...")
                         return
                     }
+                    print("saved to Dashboard successfully ... ")
+                    dismiss()
                     
                 } label: {
                     Text("Save")

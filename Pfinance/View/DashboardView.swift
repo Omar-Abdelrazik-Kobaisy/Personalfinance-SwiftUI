@@ -32,6 +32,9 @@ struct DashboardView: View {
                   sortDescriptors: [NSSortDescriptor(keyPath: \PaymentActivity.date, ascending: false)])
     var paymentActivities: FetchedResults<PaymentActivity>
     @State private var isShowingPaymentForm: Bool = false
+    @State private var isShowingPaymentDetail: Bool = false
+    @State private var selectedPayment: PaymentActivity? = nil
+    @State private var selectedPaymentDetail: PaymentActivity? = nil
     @State private var listType: TransactionDisplayType = .all
     private var dashboardTitlebar: some View{
         HStack{
@@ -45,6 +48,7 @@ struct DashboardView: View {
             }
             Spacer()
             Button {
+                selectedPayment = nil
                 self.isShowingPaymentForm = true
             } label: {
                 Image(systemName: "plus.circle")
@@ -120,17 +124,63 @@ struct DashboardView: View {
                 TransactionHeader(listType: $listType)
                 
                 ForEach(paymentDataForView) { payment in
-                    TransactionCellView(payment: payment)
+                    Button {
+                        // -> Q <-???
+                        selectedPaymentDetail = payment //<- ??? can not use seletedPayment
+                        // application crashed cuz selectedPayment is nil even is selectedPayment = payment  ??
+                    } label: {
+                        TransactionCellView(payment: payment)
+                    }
+                    .foregroundColor(.primary)
+                    .contextMenu {
+                        Button {
+                            selectedPayment = payment
+                            isShowingPaymentForm = true
+                        } label: {
+                            HStack{
+                                Text("Edit")
+                                    .fontWeight(.black)
+                                Image(systemName: "pencil.line")
+                            }
+                        }
+                        Button {
+                            self.delete(payment: payment)
+                        } label: {
+                            HStack{
+                                Text("Delete")
+                                    .foregroundColor(.red)
+                                    .fontWeight(.semibold)
+                                Image(systemName: "trash")
+                                    .symbolRenderingMode(.multicolor)
+                            }
+                        }
+
+                    }
                 }
             }
             .padding(.horizontal)
         }
     }
+    private func delete(payment: PaymentActivity){
+        context.delete(payment)
+        
+        guard let _ = try? context.save() else{
+            print("faild to delete ...")
+            return
+        }
+    }
     var body: some View {
         content
-            .sheet(isPresented: $isShowingPaymentForm) {
-                PaymentFormView()
+            .sheet(isPresented: $isShowingPaymentForm,onDismiss: {
+                isShowingPaymentForm = false
+            }) {
+                PaymentFormView(payment: selectedPayment)
             }
+        //////////// -> can not use selectedPayment down below
+            .sheet(item: $selectedPaymentDetail, content: { payment in
+                PaymentDetailView(payment: payment)
+                    .presentationDetents([.medium,.large])
+            })
     }
     
 }
@@ -200,7 +250,7 @@ struct TransactionCellView: View{
             .foregroundStyle(.white,
                              payment.type == .income ?
                              .indigo : .red)
-            VStack{
+            VStack(alignment:.leading){
                 Text(payment.name)
                     .font(.headline)
                 Text(payment.date.string(with: "dd MMMM yyyy"))

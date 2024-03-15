@@ -38,6 +38,7 @@ struct PaymentDetailView: View {
             }
             
             Divider()
+            Spacer()
         }
         .padding()
     }
