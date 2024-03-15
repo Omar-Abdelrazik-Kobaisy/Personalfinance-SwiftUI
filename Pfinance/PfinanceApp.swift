@@ -12,7 +12,7 @@ struct PfinanceApp: App {
     private let persistenceController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

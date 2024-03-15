@@ -10,6 +10,7 @@ import SwiftUI
 struct PaymentFormView: View {
     var payment: PaymentActivity?
     @StateObject private var paymentVM: PaymentFormViewModel
+    @Environment(\.managedObjectContext) var context
     @Environment(\.dismiss) var dismiss
     
     init(payment: PaymentActivity? = nil){
@@ -98,6 +99,19 @@ struct PaymentFormView: View {
                 //MARK: Save Button
                 
                 Button {
+                    let newPayment = payment ?? PaymentActivity(context: context)
+                    newPayment.paymentId = UUID()
+                    newPayment.name = paymentVM.name
+                    newPayment.type = paymentVM.type
+                    newPayment.date = paymentVM.date
+                    newPayment.amount = Double(paymentVM.amount) ?? 010
+                    newPayment.address = paymentVM.location
+                    newPayment.memo = paymentVM.memo
+                    
+                    guard let _ = try? context.save() else {
+                        print("faild to save to dashboard ...")
+                        return
+                    }
                     
                 } label: {
                     Text("Save")

@@ -20,6 +20,8 @@
 		07AAB5992B9C691D00CBA087 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB5982B9C691D00CBA087 /* PersistenceController.swift */; };
 		07AAB59B2B9C9B5500CBA087 /* PaymentFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB59A2B9C9B5500CBA087 /* PaymentFormView.swift */; };
 		07AAB59D2B9CFA1F00CBA087 /* PaymentFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAB59C2B9CFA1F00CBA087 /* PaymentFormViewModel.swift */; };
+		07B9D6E12B9F4210004522CE /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9D6E02B9F4210004522CE /* DashboardView.swift */; };
+		07B9D6E32B9FA9D6004522CE /* NumberFormatter+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9D6E22B9FA9D6004522CE /* NumberFormatter+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		07AAB5982B9C691D00CBA087 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		07AAB59A2B9C9B5500CBA087 /* PaymentFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFormView.swift; sourceTree = "<group>"; };
 		07AAB59C2B9CFA1F00CBA087 /* PaymentFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFormViewModel.swift; sourceTree = "<group>"; };
+		07B9D6E02B9F4210004522CE /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		07B9D6E22B9FA9D6004522CE /* NumberFormatter+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			children = (
 				076473CF2B9F240A0008F6A6 /* Preview+EXT.swift */,
 				076473D12B9F2AA00008F6A6 /* Date+EXT.swift */,
+				07B9D6E22B9FA9D6004522CE /* NumberFormatter+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				07AAB59A2B9C9B5500CBA087 /* PaymentFormView.swift */,
 				076473CA2B9F1C610008F6A6 /* PaymentDetailView.swift */,
+				07B9D6E02B9F4210004522CE /* DashboardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,11 +203,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				07AAB5942B9C63EE00CBA087 /* PaymentActivity.swift in Sources */,
+				07B9D6E12B9F4210004522CE /* DashboardView.swift in Sources */,
 				07AAB59D2B9CFA1F00CBA087 /* PaymentFormViewModel.swift in Sources */,
 				07AAB5972B9C67E200CBA087 /* Pfinance.xcdatamodeld in Sources */,
 				07AAB5852B9C585700CBA087 /* ContentView.swift in Sources */,
 				07AAB59B2B9C9B5500CBA087 /* PaymentFormView.swift in Sources */,
 				07AAB5832B9C585700CBA087 /* PfinanceApp.swift in Sources */,
+				07B9D6E32B9FA9D6004522CE /* NumberFormatter+EXT.swift in Sources */,
 				076473D02B9F240A0008F6A6 /* Preview+EXT.swift in Sources */,
 				076473CB2B9F1C610008F6A6 /* PaymentDetailView.swift in Sources */,
 				07AAB5992B9C691D00CBA087 /* PersistenceController.swift in Sources */,
